@@ -4,9 +4,7 @@ const handlebars = require('express-handlebars');//Insere o "handlebars" no cód
 const bodyParser = require('body-parser');//Insere o "bodyParser" no código
 const Curriculo = require('./models/Sugest');//Armazena as tabelas do banco de dados criadas no arquivo "Sugest.js"
 const serpapi = require("serpapi");
-const fs = require('fs');
-const { json } = require('body-parser');
-const { response } = require('express');
+
 
 app.use(express.static('./'));
 app.use(express.static('public'));//Deixa a pasta "public" pública 
@@ -61,11 +59,12 @@ const myFunction = async function() {
     };
       
     const response = await serpapi.getJson("google_jobs", params);
-    const arrResponse = [response.search_metadata]
-    console.log(arrResponse);
+    console.log(response);
 
     app.get("/api", function(req, res){
-        res.send(arrResponse);
+
+        res.send(response);
+
     });
 
 }
