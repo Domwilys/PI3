@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste</title>
+    </head>
+
+    <body>
+
+        <p id="jsonTeste"></p>
+        
+        <footer class="rodape reveal">
+            <ul class="rodape__coluna">
+
+                <form id="formulario" name="sugest_form" action="/" method="post">
+                    <h3 class="rodape__subtitulo">Quer deixar alguma sugestão?</h3>
+                    <li class="rodape__item">
+                        <input id="nome_campo" required type="text" placeholder="Nome" name="nome"/>
+                    </li>
+                    <li class="rodape__item">
+                        <input id="email_campo" required type="text" placeholder="E-mail" name="email"/>
+                    </li>
+                    
+                    {{!-- teste --}}
+
+                    <li class="rodape__item">
+                        <input id="sobre_campo" required type="text" placeholder="Sobre" name="sobre">
+                    </li>
+
+                    <li class="rodape__item">
+                        <input id="experiencia_campo" required type="text" placeholder="experiencia" name="experiencia">
+                    </li>
+
+                    <li class="rodape__item">
+                        <input id="formacaoAcademica_campo" required type="text" placeholder="Formação Acadêmica" name="formacaoAcademica">
+                    </li>
+
+                    <li class="rodape__item">
+                        <input id="skills_campo" required type="text" placeholder="Skills" name="skills">
+                    </li>
+
+                    <li class="rodape__item">
+                        <button type="submit" class="rodape__botao">Enviar</button>
+                    </li>
+                </form>
+            </ul>
+        </footer>
+
+        <div class="dadosapi">
+
+            
+
+        </div>
+        
+    </body>
+
+</html>
+<script src="sendform.js"></script>
+<script src="leitorDadosAPI.js"></script>
