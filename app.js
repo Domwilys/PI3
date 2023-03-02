@@ -7,7 +7,9 @@ const serpapi = require("serpapi");
 
 
 app.use(express.static('./'));
-app.use(express.static('public'));//Deixa a pasta "public" pública 
+app.use(express.static('public'));
+app.use(express.static('tailwindsrc'));
+app.use(express.static('dist'));
 
 //Configurações para o handlebars
 app.engine('handlebars', handlebars.engine({
